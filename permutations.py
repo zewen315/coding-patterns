@@ -19,7 +19,7 @@ def permute(nums: List[int]) -> List[List[int]]:
             path.append(nums[i])
 
             helper(path)
-            
+
             path.pop()
             used[i] = False
 
@@ -27,7 +27,7 @@ def permute(nums: List[int]) -> List[List[int]]:
     return res
 
 
-def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+def permuteUnique(nums: List[int]) -> List[List[int]]:
     nums.sort()
 
     res = []
@@ -55,8 +55,8 @@ def permuteUnique(self, nums: List[int]) -> List[List[int]]:
             path.pop()
             used[i] = False
 
-        dfs()
-        return res
+    dfs()
+    return res
 
 
 if __name__ == "__main__":
