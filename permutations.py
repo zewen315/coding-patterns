@@ -26,7 +26,9 @@ def permute(nums: List[int]) -> List[List[int]]:
     helper([])
     return res
 
-
+#     []
+#   /  |  \
+# 1a  1b   2
 def permuteUnique(nums: List[int]) -> List[List[int]]:
     nums.sort()
 
