@@ -34,6 +34,10 @@ def binarySearchRecursive(nums: List[int], target: int) -> int:
     return helper(nums, target, 0, len(nums) - 1)
 
 
+def binarySearchHigher(nums: List[int], target: int) -> int:
+    pass
+
+
 if __name__ == "__main__":
 
     # index: 0  1  2  3  4  5
