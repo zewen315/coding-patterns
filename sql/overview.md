@@ -6,58 +6,7 @@ A collection of common SQL interview patterns.
 
 # 1. Conditional Aggregation (Pivot)
 
-**Use Case**
-
-Transform rows into columns.
-
-Input:
-
-| id | event | time |
-|----|-------|------|
-| 1 | start | 10:00 |
-| 1 | end | 10:30 |
-| 2 | start | 11:00 |
-| 2 | end | 11:20 |
-
-Output:
-
-| id | start_time | end_time |
-|----|------------|----------|
-| 1 | 10:00 | 10:30 |
-| 2 | 11:00 | 11:20 |
-
-```sql
-SELECT
-    id,
-    MAX(CASE WHEN event = 'start' THEN time END) AS start_time,
-    MAX(CASE WHEN event = 'end' THEN time END) AS end_time
-FROM EventLog
-GROUP BY id;
-```
-
-How it works:
-
-For `start_time`:
-
-```
-start -> 10:00
-end   -> NULL
-```
-
-After grouping:
-
-```
-MAX(10:00, NULL) = 10:00
-```
-
-Likewise for `end_time`.
-
-Common interview questions:
-
-- Start / End event logs
-- Order status
-- Gender statistics
-- Monthly pivot tables
+See [pivot.md](pivot.md) for rows → columns and the reverse (columns → rows).
 
 ---
 
