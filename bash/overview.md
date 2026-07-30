@@ -1,23 +1,5 @@
 # Shell Script
 
-## Commonly Used
-
-Easy:
-- sort
-- grep
-- uniq
-- cut
-- tr
-- wc
-
-Hard:
-- find
-- sed
-- awk
-- xargs
-
----
-
 ## Script Arguments
 
 ```bash
